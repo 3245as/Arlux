@@ -4,7 +4,7 @@ local lang = redis:get(hash)
     -- superuser and admins only (because sudo are always has privilege)
     if not is_admin(msg) then
    if not lang then
-        return '_You are not bot admin_'
+        return '_Error❢ You are not bot admin_'
 else
      return 'شما مدیر ربات نمیباشید'
     end
@@ -12,7 +12,7 @@ end
     local data = load_data(_config.moderation.data)
   if data[tostring(msg.to.id)] then
 if not lang then
-   return '_Group is already added_'
+   return '_Group is already added❢_'
 else
 return 'گروه در لیست گروه های مدیریتی ربات هم اکنون موجود است'
   end
@@ -82,7 +82,7 @@ local lang = redis:get(hash)
     -- superuser and admins only (because sudo are always has privilege)
       if not is_admin(msg) then
      if not lang then
-        return '_You are not bot admin_'
+        return '_Error❢You are not bot admin_'
    else
         return 'شما مدیر ربات نمیباشید'
     end
